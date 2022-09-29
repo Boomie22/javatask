@@ -1,0 +1,44 @@
+Your assignment is to write classes for raw, uncompressed images. Your program will use objects and classes, including inheritance.
+
+In the next 6 class periods, I'll guide you through incremental development of this program in class. Reading Chapter 7 and highlights of Chapter 10 is also essential to this project.
+
+Your best way to proceed is to try to complete each step we talk about in class by the next class period. 
+
+FIRST, CREATE A GS CLASS
+
+Step 1: As an example of what you will do in your program, see how a Student class is developed. 
+Step 2: Develop a GS class following the Student class example. Think about what the appropriate data members and member methods should be, considering that we want to be able to do these things to or with a GS object:
+construct an object of the class
+tell the object its dimensions
+tell the object the name of the file from which it is created
+read in the image from its associated file
+write out the image to a file of a given name
+lighten or darken the image
+increase the contrast of the image
+dither the image with the pattern dithering or error diffusion dithering method you wrote in Program 1 – whichever one you choose. (You only need to include 1.)
+
+When you begin the development of this class, you can write the accessor and mutator methods as well as the reading and writing methods right away.(Accessors and mutators are sometimes called "getters" and "setters." The IntelliJ API is very helpful in creating these. I'll show you how.)  For the more complicated methods, just leave stubs for now. 
+Step 3: In your main method, declare an instance of the GS class. Just for an experiment to be sure everything works, read in the data from an image file (e.g. Ian.raw) and write the exact same data with a different file name (like IanCloned.raw). The two pictures should be the same.
+Step 4: Put your dithering method into the program. Put a call to dithering in your main method to be sure it works.
+Step 5: Write code for lightening/darkening and increasing contrast.
+
+NEXT, CREATE AN RGB CLASS
+This will be demonstrated in class by means of the Student/Undergrad/Grad classes.
+
+NEXT, CREATE A SUPERCLASS FOR THE GS AND RGB CLASSES
+To do this, you'll need to make changes to your GS and RGB classes. This will be demonstrated in class.
+
+NEXT, WRITE YOUR MAIN METHOD TO TEST THE CLASSES
+The main method should do the following :
+
+Looping as long as the user wants to continue
+Prompt the user for the name of the image to be read, whether it is grayscale or RGB, its width, and its height. 
+Call a method called readImage that takes as arguments the name of the image and the number of channels (1 for a grayscale image and 3 for an RGB image).
+Looping as long as the user wants to continue, offer these choices:
+compute size in pixels (store and print out answer)
+compute size in bytes (store and print out answer)
+lighten or darken the image and write the new image to disk. (Call it OriginalNameLight.raw where OriginalName is replaced with the name of the image lightened.) The lightenOrDarken method should have an argument that tells which of the two things it should do.
+increase the contrast of the image and write the new image to disk. (Call it OriginalNameContrast.raw where OriginalName is replaced with the name of the image processed.)
+for grayscale images only – dither the image and write the new image to disk. (Call it OriginalNameDithered.raw where OriginalName is replaced with the name of the image dithered.) 
+	End loop for performing different processes on one image
+End loop deciding what image to process.
